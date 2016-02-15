@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 green-text">
+      <h3 id="name">Name: <%= @user.name %></h3>
+    </div>
+    <div class="col-sm-6">
+      <h3>Email: <%= @user.email %></h3>
+    </div>
+  </div>
+
+  <button id="hide-button">Hide Name</button>
+</div>
+
+<%= javascript_tag do %>
+  $('#hide-button').click(function() {
+    $('#name').hide();
+  });
+<% end %>
